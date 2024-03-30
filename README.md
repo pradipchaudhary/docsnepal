@@ -1,6 +1,6 @@
 # Tinder Web Effect
 
-![Tinder Web Effect](https://your-repo-url.com/preview.png)
+![Tinder Web Effect](./preview.gif)
 
 ## Overview
 
@@ -12,10 +12,10 @@ You can view a live demo of the Tinder web effect [here](https://your-demo-url.c
 
 ## Features
 
-- Swipe left/right functionality.
-- Customizable card design.
-- Smooth animations.
-- Responsive design for various screen sizes.
+-  Swipe left/right functionality.
+-  Customizable card design.
+-  Smooth animations.
+-  Responsive design for various screen sizes.
 
 ## Usage
 
@@ -30,7 +30,7 @@ git clone https://github.com/your-username/tinder-web-effect.git
 2. Include the necessary files in your HTML:
 
 ```html
-<link rel="stylesheet" href="path/to/tinder-web-effect.css">
+<link rel="stylesheet" href="path/to/tinder-web-effect.css" />
 <script src="path/to/tinder-web-effect.js"></script>
 ```
 
@@ -38,26 +38,26 @@ git clone https://github.com/your-username/tinder-web-effect.git
 
 ```html
 <div class="tinder-wrapper">
-    <div class="tinder-card">
-        <!-- Your card content here -->
-    </div>
-    <!-- Add more cards here -->
+   <div class="tinder-card">
+      <!-- Your card content here -->
+   </div>
+   <!-- Add more cards here -->
 </div>
 ```
 
 4. Initialize the Tinder web effect:
 
 ```javascript
-const tinder = new TinderWebEffect('.tinder-wrapper', {
-    /* Options */
+const tinder = new TinderWebEffect(".tinder-wrapper", {
+   /* Options */
 });
 ```
 
 ## Options
 
-- `threshold`: The minimum distance (in pixels) a user must swipe to trigger a swipe action. Default is `100`.
-- `onSwipeLeft(cardIndex)`: Callback function triggered when a card is swiped left.
-- `onSwipeRight(cardIndex)`: Callback function triggered when a card is swiped right.
+-  `threshold`: The minimum distance (in pixels) a user must swipe to trigger a swipe action. Default is `100`.
+-  `onSwipeLeft(cardIndex)`: Callback function triggered when a card is swiped left.
+-  `onSwipeRight(cardIndex)`: Callback function triggered when a card is swiped right.
 
 ## Contributing
 
