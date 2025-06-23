@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./public/logo.png" alt="DocsNepal Banner" width="100%" />
+  <img src="./public/logo.png" alt="DocsNepal Banner" />
 </p>
 
 
