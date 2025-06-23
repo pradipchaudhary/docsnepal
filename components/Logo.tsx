@@ -5,8 +5,8 @@ const Logo = () => {
     return (
         <Image src="/logo.png"
             alt="DocsNepal Logo"
-            width={400}
-            height={400}
+            width={90}
+            height={90}
             className="rounded-xl">
         </Image>
     )
