@@ -3,11 +3,18 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-tr from-indigo-100 via-white to-pink-100 px-4 text-center">
-      {/* Logo Section */}
-      <div className="absolute top-6 left-6 sm:left-10 flex items-center gap-2">
-        <Image src="/logo.png" alt="DocsNepal Logo" width={40} height={40} className="rounded-md shadow ring-1 ring-indigo-200" />
-        <span className="text-lg font-semibold text-indigo-700 tracking-tight hidden sm:inline">DocsNepal</span>
+      {/* Centered Logo Section */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <Image
+          src="/logo.png"
+          alt="DocsNepal Logo"
+          width={40}
+          height={40}
+          className="rounded-md shadow ring-1 ring-indigo-200"
+        />
+        <span className="text-lg font-semibold text-indigo-700 tracking-tight">DocsNepal</span>
       </div>
+
 
       {/* Welcome Text */}
       <div className="max-w-2xl mt-12">
