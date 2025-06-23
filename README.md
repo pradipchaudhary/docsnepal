@@ -3,11 +3,11 @@
   <img src="./public/logo.png" alt="DocsNepal Banner" />
 </p>
 
-
+<P align="center">
 **DocsNepal** is a simple and intuitive platform to generate official Nepali documents — including job applications, affidavits, letters, and more — in **Nepali** and **English** formats.
 
 [🌐 Live Demo](https://docsnepal.vercel.app) • [🐞 Report Issue](https://github.com/pradipchaudhary/docsnepal/issues) • [👨‍💻 Author](https://github.com/pradipchaudhary)
-
+</p>
 ---
 
 ## 🚀 Overview
