@@ -1,24 +1,19 @@
 'use client'
 
+import Logo from '@/components/Logo'
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-zinc-800 flex flex-col items-center justify-center px-6 relative overflow-hidden">
-      
+
       {/* Background gradient shape */}
       <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-indigo-100 rounded-full blur-[160px] opacity-50 -z-10"></div>
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-pink-100 rounded-full blur-[140px] opacity-50 -z-10"></div>
 
       {/* Logo and Title */}
       <div className="flex flex-col items-center justify-center mt-10 mb-8">
-        <Image
-          src="/logo.png"
-          alt="DocsNepal Logo"
-          width={90}
-          height={90}
-          className="rounded-xl shadow-lg ring-1 ring-indigo-200"
-        />
+        <Logo />
         <h1 className="mt-5 text-4xl md:text-5xl font-bold tracking-tight text-indigo-700 text-center">
           Welcome to DocsNepal
         </h1>
