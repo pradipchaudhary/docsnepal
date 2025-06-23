@@ -12,7 +12,7 @@ export default function Home() {
           height={200}
           className="rounded-md shadow ring-1 ring-indigo-200"
         />
-        <span className="text-lg font-semibold text-indigo-700 tracking-tight">DocsNepal</span>
+        
       </div>
 
 
