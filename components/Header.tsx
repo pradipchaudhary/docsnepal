@@ -10,12 +10,12 @@ export default function Header() {
 
     return (
         <header className="w-full bg-white border-b border-zinc-200 shadow-sm sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2">
                     <Logo />
-                    {/* <span className="text-xl font-semibold text-indigo-700 hidden sm:inline">DocsNepal</span> */}
+                    <span className="text-xl font-semibold text-[#4c8944] hidden sm:inline"><span className='text-[#e6303f]'>Docs</span>Nepal</span>
                 </Link>
 
                 {/* Desktop Nav */}

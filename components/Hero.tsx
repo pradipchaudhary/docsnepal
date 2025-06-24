@@ -6,11 +6,6 @@ import Link from 'next/link'
 export default function Hero() {
     return (
         <section className="relative overflow-hidden bg-white text-zinc-800 py-24 px-6 text-center">
-
-            {/* Decorative Background Blur Shapes */}
-            <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-indigo-100 rounded-full blur-[140px] opacity-50 -z-10" />
-            <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-pink-100 rounded-full blur-[120px] opacity-50 -z-10" />
-
             {/* Content */}
             <div className="max-w-3xl mx-auto flex flex-col items-center">
                 <Logo />
