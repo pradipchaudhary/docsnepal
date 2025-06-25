@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 // ✅ SEO Metadata
 export const metadata: Metadata = {
-  title: "DocsNepal – Smart Document Generator for Nepal",
+  title: "DocsNepal – Generate Nepali Official Documents Easily",
   description:
     "Generate official Nepali documents like Nibedan, CVs, Pattas, and Affidavits instantly. Fill smart forms and download ready-to-use documents in Nepali or English format. No login required.",
   metadataBase: new URL("https://docsnepal.vercel.app"),
