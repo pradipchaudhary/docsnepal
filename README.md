@@ -53,44 +53,8 @@ Creating official documents in Nepal is often time-consuming, confusing, and fil
 
 ---
 
-## 📦 Getting Started (Developers)
 
-```bash
-# Clone the repository
-git clone https://github.com/pradipchaudhary/docsnepal.git
 
-# Navigate into the project directory
-cd docsnepal
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm run dev
-
-```
-Visit `http://localhost:3000` in your browser.
-
----
-
-## 🌐 Live Demo
-
-👉 [Visit DocsNepal](https://docsnepal.vercel.app)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the project
-2. Create a feature branch
-3. Commit and push your changes
-4. Open a pull request
-
-Or simply [open an issue](https://github.com/pradipchaudhary/docsnepal/issues) to share feedback.
-
----
 
 ## 🛡️ License
 
