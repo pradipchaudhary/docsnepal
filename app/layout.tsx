@@ -61,13 +61,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
 
-        <main
-          className="min-h-screen bg-white text-zinc-800 flex flex-col items-center justify-center px-6 relative overflow-hidden"
-          role="main"
-          aria-label="DocsNepal landing page"
-        >
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
