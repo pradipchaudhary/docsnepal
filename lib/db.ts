@@ -1,37 +1,48 @@
-import mongoose from "mongoose";
+import mongoose, { Connection } from "mongoose";
 
-const MONGODB_URI = process.env.MONGODB_URI!;
+const MONGODB_URI = process.env.MONGODB_URI as string;
 
 if (!MONGODB_URI) {
-  throw new Error("Please define mongo_uri in env variables");
+  throw new Error("Please define MONGODB_URI in your environment variables.");
 }
 
-let cached = global.mongoose;
-
-if (!cached) {
-  cached = global.mongoose = { conn: null, promise: null };
+// Extend global type to avoid TypeScript error
+declare global {
+  // `var` instead of `let` to attach to Node.js global scope
+  var mongoose: {
+    conn: Connection | null;
+    promise: Promise<Connection> | null;
+  };
 }
 
-export async function connectToDatabase() {
-  if (cached.conn) {
-    return cached.conn;
+// Global cache (across hot reloads in development)
+global.mongoose = global.mongoose || {
+  conn: null,
+  promise: null,
+};
+
+export async function connectToDatabase(): Promise<Connection> {
+  if (global.mongoose.conn) {
+    return global.mongoose.conn;
   }
 
-  if (!cached.promise) {
+  if (!global.mongoose.promise) {
     const opts = {
       bufferCommands: true,
       maxPoolSize: 10,
     };
 
-    mongoose.connect(MONGODB_URI, opts).then(() => mongoose.connection);
+    global.mongoose.promise = mongoose
+      .connect(MONGODB_URI, opts)
+      .then(() => mongoose.connection);
   }
 
   try {
-    cached.conn = await cached.promise;
+    global.mongoose.conn = await global.mongoose.promise;
   } catch (error) {
-    cached.promise = null;
+    global.mongoose.promise = null;
     throw error;
   }
 
-  return cached.conn;
+  return global.mongoose.conn;
 }
