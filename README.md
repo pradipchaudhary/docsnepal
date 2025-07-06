@@ -2,8 +2,6 @@
   <img src="./public/logo.jpg" alt="DocsNepal Banner" width="400"/>
 </p>
 
-<h1 align="center">📄 DocsNepal</h1>
-
 <p align="center">
   A smart platform to generate official Nepali documents — job applications, affidavits, sifaris letters, and more — in both <strong>Nepali</strong> and <strong>English</strong> formats.
 </p>
