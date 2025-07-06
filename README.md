@@ -84,19 +84,3 @@ Built with ❤️ by [**Pradip Chaudhary**](https://github.com/pradipchaudhary)
 📫 Feel free to connect for contributions, improvements, or collaborations.
 
 ---
-
-## 📌 Repository Info
-
-- **Repo:** [docsnepal](https://github.com/pradipchaudhary/docsnepal)  
-- **Topics:** `nepal`, `official-documents`, `forms`, `nextjs`, `tailwindcss`, `pdf-generator`, `docx`, `nibedan`, `sifaris`, `affidavit`
-
----
-
-## 📈 SEO Meta Tags (for Vercel/Next.js pages)
-
-```html
-<meta name="title" content="DocsNepal – Smart Document Generator for Nepal">
-<meta name="description" content="Generate official Nepali documents like job applications, affidavits, and sifaris letters in both Nepali and English formats using smart form-to-document automation.">
-<meta name="keywords" content="DocsNepal, Nepal, document generator, job applications, nibedan, sifaris, affidavit, Nepali form app, pdf, docx">
-<meta name="author" content="Pradip Chaudhary">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
