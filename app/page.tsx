@@ -1,17 +1,9 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import HowItWorks from "@/components/HowItWorks";
-import Footer from "@/components/Footer";
+import Welcome from "@/components/Welcome";
 
 export default function Home() {
   return (
     <main className="bg-white text-zinc-800 font-sans">
-      <Header />
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <Footer />
+      <Welcome/>
     </main>
   );
 }
