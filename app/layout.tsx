@@ -64,9 +64,6 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased">
         {children}
-        <footer>
-          &copy; {currentYear} DocsNepal. Built with ❤️ for Nepal.
-        </footer>
       </body>
     </html>
   );
