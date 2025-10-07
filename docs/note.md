@@ -1,3 +1,7 @@
+Domain: docsnepal.com
+Registered On: 2025-06-16
+Expires On: 2026-06-16
+Updated On: 2025-06-16
 
 
 ## 📝 **Commonly Used Letters in Nepali Official Documents**
