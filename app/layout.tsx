@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 
 // ✅ SEO Metadata
 export const metadata: Metadata = {
-  title: "DocsNepal – Generate Nepali Official Documents Easily",
+  title: "Docsnepal",
   description:
     "Generate official Nepali documents like Nibedan, CVs, Pattas, and Affidavits instantly. Fill smart forms and download ready-to-use documents in Nepali or English format. No login required.",
   metadataBase: new URL("https://docsnepal.vercel.app"),
@@ -64,9 +64,6 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="antialiased">
         {children}
-        <footer>
-          &copy; {currentYear} DocsNepal. Built with ❤️ for Nepal.
-        </footer>
       </body>
     </html>
   );
