@@ -1,13 +1,43 @@
 @import "tailwindcss";
 
+/* 1. Define Color Scheme and Font */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* HSL is preferred for accessibility and dynamic themes */
+  --color-background: 0 0% 100%;
+  /* White */
+  --color-foreground: 240 5.88% 10%;
+  /* Near-black (for contrast) */
+
+  /* Font fallbacks for better cross-device consistency */
+  --font-body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
+/* 2. Dark Mode Implementation (Ready for use with Next.js/Tailwind) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: 240 5.88% 10%;
+    /* Near-black */
+    --color-foreground: 0 0% 98%;
+    /* Near-white */
+  }
+}
 
+/* 3. Apply Global Styles */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Use the variables, setting a minimum height for sticky footers/full-page content */
+  min-height: 100vh;
+
+  /* HSL values need to be wrapped in the HSL function */
+  background: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+
+  /* Apply the improved font stack */
+  font-family: var(--font-body);
+
+  /* Smooth color transitions for dark/light mode switching */
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  /* Optional: Set basic anti-aliasing for text on macOS/iOS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
