@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/logo.png" alt="DocsNepal Banner" width="300"/>
+  <img src="./public/logo.png" alt="DocsNepal Banner" width="100"/>
 </p>
 
 <p align="center">
