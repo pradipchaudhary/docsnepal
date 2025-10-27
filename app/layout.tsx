@@ -1,20 +1,11 @@
 // app/layout.tsx or app/root-layout.tsx (Next.js 15)
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.css";
 
-// Font setup
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-  display: "swap",
-});
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 
 // ✅ SEO Metadata
 export const metadata: Metadata = {
@@ -60,7 +51,7 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="antialiased">
         {children}
       </body>

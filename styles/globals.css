@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* =============================
+   1. Root Variables
+   ============================= */
+:root {
+  --color-background: 0 0% 100%;
+  --color-foreground: 240 5.88% 10%;
+
+  --color-primary: 222 100% 62%;
+  /* #4375ff */
+  --color-primary-hover: 222 100% 55%;
+  --color-primary-light: 222 100% 85%;
+  --color-border: 240 4.9% 83.9%;
+
+  /* Font System */
+  --font-sans: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+}
+
+/* ============================
+   2. Dark Mode
+   ============================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: 0 0% 13%;
+    /* #212121 */
+    --color-foreground: 0 0% 98%;
+    --color-primary: 222 100% 70%;
+    --color-primary-hover: 222 100% 65%;
+    --color-primary-light: 222 100% 80%;
+    --color-border: 0 0% 25%;
+  }
+}
+
+/* =======================
+   3. Global Styles
+   ======================= */
+body {
+  background: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  font-family: var(--font-sans);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* =======================
+   4. Elements Example
+   ======================= */
+a {
+  color: hsl(var(--color-primary));
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: hsl(var(--color-primary-hover));
+}
+
+button {
+  background: hsl(var(--color-primary));
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background: hsl(var(--color-primary-hover));
+}
