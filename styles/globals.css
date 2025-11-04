@@ -1,58 +1,39 @@
 @import "tailwindcss";
 
 /* =============================
-   1. Root Variables
+   Root Variables
    ============================= */
 :root {
   --color-background: 0 0% 100%;
-  --color-foreground: 240 5.88% 10%;
-
-  --color-primary: 222 100% 62%;
-  /* #4375ff */
-  --color-primary-hover: 222 100% 55%;
-  --color-primary-light: 222 100% 85%;
-  --color-border: 240 4.9% 83.9%;
-
-  /* Font System */
-  --font-sans: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui,
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, "Noto Sans", sans-serif;
-}
-
-/* ============================
-   2. Dark Mode
-   ============================ */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: 0 0% 13%;
-    /* #212121 */
-    --color-foreground: 0 0% 98%;
-    --color-primary: 222 100% 70%;
-    --color-primary-hover: 222 100% 65%;
-    --color-primary-light: 222 100% 80%;
-    --color-border: 0 0% 25%;
-  }
+  --color-foreground: 222 10% 14%;
+  --color-muted: 222 6% 45%;
+  --color-primary: 222 100% 58%;
+  --color-primary-hover: 222 100% 50%;
+  --color-border: 0 0% 90%;
+  --font-sans: "Inter", "Poppins", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* =======================
-   3. Global Styles
+   Base & Typography
    ======================= */
+html,
 body {
   background: hsl(var(--color-background));
   color: hsl(var(--color-foreground));
   font-family: var(--font-sans);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  min-height: 100vh;
+  line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-
 /* =======================
-   4. Elements Example
+   Elements
    ======================= */
 a {
   color: hsl(var(--color-primary));
-  transition: color 0.3s ease;
+  transition: color 0.25s ease;
 }
 
 a:hover {
@@ -62,11 +43,15 @@ a:hover {
 button {
   background: hsl(var(--color-primary));
   color: white;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  border-radius: 9999px;
+  padding: 0.75rem 1.8rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 8px hsl(var(--color-primary)/0.2);
 }
 
 button:hover {
   background: hsl(var(--color-primary-hover));
+  transform: translateY(-1px);
 }
