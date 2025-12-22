@@ -1,4 +1,4 @@
-// app/layout.tsx or app/root-layout.tsx (Next.js 15)
+// app/layout.tsx
 import type { Metadata } from "next";
 import "../styles/globals.css";
 
@@ -8,55 +8,68 @@ import HomeLayout from "@/components/layout/HomeLayout";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 
-// ✅ SEO Metadata
 export const metadata: Metadata = {
   title: "Docsnepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
   description:
-    "Generate official Nepali documents like Nibedan, CVs, Pattas, and Affidavits instantly. Fill smart forms and download ready-to-use documents in Nepali or English format. No login required.",
+    "DocsNepal simplifies government documents, tools, and public information for everyone in Nepal. Instantly generate Nibedan, CVs, Pattas, and Affidavits with smart forms. No login required.",
   metadataBase: new URL("https://docsnepal.vercel.app"),
   alternates: {
     canonical: "https://docsnepal.vercel.app",
   },
+  keywords: [
+    "DocsNepal",
+    "Nepal government documents",
+    "Nibedan generator",
+    "CV Nepali format",
+    "Affidavit generator",
+    "Pattas",
+    "Public information",
+    "Online document tools",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  themeColor: "#0f172a",
   openGraph: {
-    title: "DocsNepal – Smart Document Generator for Nepal",
+    title: "Docsnepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
     description:
-      "Instantly generate legally formatted Nepali documents like Nibedan, CVs, Pattas, and Affidavits. Smart, privacy-first, and no login required.",
+      "DocsNepal simplifies government documents, tools, and public information for everyone in Nepal. Generate Nibedan, CVs, Pattas, and Affidavits instantly with smart forms. No login required.",
     url: "https://docsnepal.vercel.app",
     siteName: "DocsNepal",
     images: [
       {
-        url: "https://docsnepal.vercel.app/og-banner.png", // full URL recommended for OG
+        url: "https://docsnepal.vercel.app/og-banner.png",
         width: 1200,
         height: 630,
-        alt: "DocsNepal – Nepali Document Generator",
+        alt: "DocsNepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
+        type: "image/png",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DocsNepal – Smart Document Generator for Nepal",
+    title: "Docsnepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
     description:
-      "Easily generate Nibedan, CVs, Pattas, and Affidavits with DocsNepal. Smart forms, Nepali format, and one-click downloads.",
-    images: ["https://docsnepal.vercel.app/og-banner.png"], // full URL preferred
+      "DocsNepal simplifies government documents, tools, and public information for everyone in Nepal. Generate Nibedan, CVs, Pattas, and Affidavits instantly with smart forms. No login required.",
+    images: [
+      {
+        url: "https://docsnepal.vercel.app/og-banner.png",
+        alt: "DocsNepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
+      },
+    ],
   },
   icons: {
     icon: "/favicon.ico",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="antialiased">
-        <HomeLayout>
-          {children}
-        </HomeLayout>
+        <HomeLayout>{children}</HomeLayout>
       </body>
     </html>
   );
