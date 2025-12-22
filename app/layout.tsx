@@ -3,13 +3,14 @@ import type { Metadata } from "next";
 import "../styles/globals.css";
 
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import HomeLayout from "@/components/layout/HomeLayout";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 
 // ✅ SEO Metadata
 export const metadata: Metadata = {
-  title: "Docsnepal",
+  title: "Docsnepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
   description:
     "Generate official Nepali documents like Nibedan, CVs, Pattas, and Affidavits instantly. Fill smart forms and download ready-to-use documents in Nepali or English format. No login required.",
   metadataBase: new URL("https://docsnepal.vercel.app"),
@@ -53,7 +54,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
       <body className="antialiased">
-        {children}
+        <HomeLayout>
+          {children}
+        </HomeLayout>
       </body>
     </html>
   );
