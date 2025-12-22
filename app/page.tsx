@@ -1,9 +1,7 @@
-import Welcome from "@/components/Welcome";
+import Hero from "@/components/section/hero/Hero";
 
 export default function Home() {
   return (
-    <main className="bg-white text-zinc-800 font-sans">
-      <Welcome/>
-    </main>
+    <Hero />
   );
 }
