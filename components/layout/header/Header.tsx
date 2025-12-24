@@ -90,7 +90,7 @@ const Header = () => {
             </div>
 
             <Link href="/services" className={menuItem}>Services</Link>
-            <Link href="/contact" className={menuItem}>Contact</Link>
+            <Link href="/contact" className={menuItem}>Blog</Link>
 
           </nav>
         </div>
