@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta" });
 
 export const metadata: Metadata = {
-  title: "Docsnepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
+  title: "DocsNepal - Simplifying government documents, tools, and public information for everyone in Nepal.",
   description:
     "DocsNepal simplifies government documents, tools, and public information for everyone in Nepal. Instantly generate Nibedan, CVs, Pattas, and Affidavits with smart forms. No login required.",
   metadataBase: new URL("https://docsnepal.vercel.app"),

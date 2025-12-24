@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2">
             <div className=" rounded-xl flex items-center justify-center">
               {/* You can replace this with an SVG or image */}
-              <Image src="/images/hero-image.png" alt="Hero Image" width={380} height={380} />
+              <Image src="/images/hero-image.png" alt="Hero Image" width={980} height={980} />
             </div>
           </div>
 
