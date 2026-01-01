@@ -25,3 +25,4 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default HomeLayout;
+
