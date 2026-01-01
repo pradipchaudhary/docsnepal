@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <section className="">
+      <div className="max-w-7xl mx-auto py-24">
 
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
 
@@ -48,7 +48,7 @@ const Hero = () => {
           <div className="w-full lg:w-1/2">
             <div className=" rounded-xl flex items-center justify-center">
               {/* You can replace this with an SVG or image */}
-              <Image src="/images/hero-image.png" alt="Hero Image" width={980} height={980} />
+              <Image src="/logo.png" alt="Hero Image" width={980} height={980} />
             </div>
           </div>
 
