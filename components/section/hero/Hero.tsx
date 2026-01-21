@@ -1,59 +1,43 @@
-import Image from "next/image";
-import Link from "next/link";
+import React from "react";
 
 const Hero = () => {
   return (
-    <section className="">
-      <div className="max-w-7xl mx-auto py-24">
+    <section className="relative h-screen bg-gradient-to-r from-blue-600 to-cyan-400 flex items-center justify-center text-center px-4">
+      {/* Dark overlay for better text contrast */}
+      <div className="absolute inset-0 bg-black opacity-25"></div>
 
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
+      {/* Hero content */}
+      <div className="relative z-10 max-w-3xl text-white">
+        {/* Main Heading */}
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4">
+          DocsNepal
+        </h1>
 
-          {/* Left Content */}
-          <div className="max-w-xl text-center lg:text-left">
-            {/* Badge */}
-            <span className="inline-block mb-4 rounded-full bg-gray-100 px-4 py-1 text-xs font-semibold text-gray-700">
-              Public Service Platform
-            </span>
+        {/* Subheading / Tagline */}
+        <p className="text-lg sm:text-xl lg:text-2xl mb-8">
+          Simplifying Government Services & Public Information
+        </p>
 
-            {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black leading-tight">
-              Simplifying <span className="text-blue-600">Government Documents</span> & <span className="text-blue-600">Online Tools</span> in Nepal
-            </h1>
-
-            {/* Description */}
-            <p className="mt-6 text-base sm:text-lg text-gray-600 leading-relaxed">
-              Access guides, forms, and essential tools like police reports, date converters,
-              and PDF utilities—all in one place. Save time and simplify government-related processes.
-            </p>
-
-            {/* CTAs */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link
-                href="/tools"
-                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-6 py-3 text-sm font-medium text-gray-100 hover:bg-blue-700 transition"
-              >
-                Explore Tools
-              </Link>
-
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-6 py-3 text-sm font-medium text-gray-800 hover:bg-gray-50 transition"
-              >
-                View Services
-              </Link>
-            </div>
-          </div>
-
-          {/* Right Illustration Placeholder */}
-          <div className="w-full lg:w-1/2">
-            <div className=" rounded-xl flex items-center justify-center">
-              {/* You can replace this with an SVG or image */}
-              <Image src="/logo.png" alt="Hero Image" width={980} height={980} />
-            </div>
-          </div>
-
+        {/* Call-to-action buttons */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="#tools"
+            className="bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-200 transition"
+          >
+            Explore Tools
+          </a>
+          <a
+            href="#guides"
+            className="border border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition"
+          >
+            Read Guides
+          </a>
         </div>
+      </div>
 
+      {/* Optional decorative elements */}
+      <div className="absolute bottom-10 w-full flex justify-center">
+        <span className="animate-bounce text-white text-3xl">⬇️</span>
       </div>
     </section>
   );
