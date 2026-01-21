@@ -66,7 +66,7 @@ const Header = () => {
                       Photos
                     </p>
                     <div className="space-y-1">
-                      <Link href="/tools/photo-size" className={dropdownItem}>
+                      <Link href="/tools/photo-editor" className={dropdownItem}>
                         Photo Size Converter
                       </Link>
                       <Link href="/tools/background-remove" className={dropdownItem}>
