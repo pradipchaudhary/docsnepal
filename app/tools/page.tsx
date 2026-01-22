@@ -4,7 +4,7 @@ const toolsData = [
   {
     category: "Photos",
     tools: [
-      { name: "Photo Size Converter", href: "/tools/photo-size" },
+      { name: "Photo Size Converter", href: "/tools/photo-editor" },
       { name: "Background Remover", href: "/tools/background-remove" },
     ],
   },
