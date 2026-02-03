@@ -1,7 +1,16 @@
-import Hero from "@/components/section/hero/Hero";
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import React from 'react'
 
-export default function Home() {
+const HomePage = () => {
   return (
-    <Hero />
-  );
+    <div>
+      <Header />
+      <Hero />
+      <Footer />
+    </div>
+  )
 }
+
+export default HomePage
