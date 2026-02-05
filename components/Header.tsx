@@ -1,44 +1,40 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 z-50 w-full">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-        {/* Brand / Logo */}
-        <Link
-          href="/"
-          className="text-xl font-normal text-white"
-        >
-          docsnepal
+    <header className="fixed top-5 left-0 z-50 w-full">
+      <div className="mx-auto flex h-12 max-w-5xl items-center justify-between px-4">
+
+        {/* Logo Image */}
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-white.png"   // 👉 Put your logo inside public folder
+            alt="Docs Nepal Logo"
+            width={140}
+            height={40}
+            priority
+            className="object-contain"
+          />
         </Link>
 
         {/* Menu */}
-        <nav className="flex gap-6">
-          <Link
-            href="/"
-            className="text-sm font-normal lowercase text-white hover:opacity-80"
+        <nav className="flex items-center gap-5">
+          <Link href="/" className="nav-link">home</Link>
+          <Link href="/tools" className="nav-link">tools</Link>
+          <Link href="/service" className="nav-link">service</Link>
+          <Link href="/about" className="nav-link">about</Link>
+
+          {/* Language Switcher */}
+          <select
+            className="bg-transparent text-sm lowercase text-white outline-none cursor-pointer"
+            defaultValue="en"
           >
-            home
-          </Link>
-          <Link
-            href="/tools"
-            className="text-sm font-normal lowercase text-white hover:opacity-80"
-          >
-            tools
-          </Link>
-          <Link
-            href="/service"
-            className="text-sm font-normal lowercase text-white hover:opacity-80"
-          >
-            service
-          </Link>
-          <Link
-            href="/about"
-            className="text-sm font-normal lowercase text-white hover:opacity-80"
-          >
-            about
-          </Link>
+            <option value="en" className="text-black">en</option>
+            <option value="np" className="text-black">np</option>
+          </select>
         </nav>
+
       </div>
     </header>
   );
