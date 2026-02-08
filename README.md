@@ -1,9 +1,11 @@
 <p align="center">
-  <img src="./public/logo.png" alt="DocsNepal Banner" width="100"/>
+  <img src="./public/logo-white.png" alt="DocsNepal Banner" width="100"/>
 </p>
 
 <p align="center">
-  A smart platform to generate official Nepali documents — job applications, affidavits, sifaris letters, and more — in both <strong>Nepali</strong> and <strong>English</strong> formats.
+  A trusted digital platform providing verified government
+              information, official notices, public documents, and
+              essential tools — built to serve the people of Nepal.
 </p>
 
 <p align="center">
