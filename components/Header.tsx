@@ -49,7 +49,7 @@ export default function Header() {
 
         {/* Menu */}
         <nav className="flex items-center gap-6">
-          {["home", "tools", "service", "about"].map((item) => (
+          {["home", "tools", "service", "videos"].map((item) => (
             <Link
               key={item}
               href={item === "home" ? "/" : `/${item}`}
