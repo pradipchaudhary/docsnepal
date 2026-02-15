@@ -1,65 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
-  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const menuItems = ["home", "tools", "services", "videos"];
 
   return (
-    <header
-      className={`
-        fixed top-0 left-0 z-50 w-full
-        transition-all duration-500 ease-in-out
-        ${scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-sm"
-          : "bg-transparent"}
-      `}
-    >
-      <div
-        className="
-          mx-auto max-w-5xl
-          flex items-center justify-between
-          px-4 py-4
-          h-20
-        "
-      >
+    <header className="sticky top-0 z-50 w-full bg-white shadow-sm">
+      <div className="mx-auto max-w-5xl flex items-center justify-between px-4 h-20">
+
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src={scrolled ? "/logo-dark.png" : "/logo-white.png"}
+            src="/logo-dark.png"
             alt="Docs Nepal Logo"
             width={150}
             height={44}
             priority
-            className={`
-              object-contain
-              transition-all duration-500 ease-in-out
-              ${scrolled ? "opacity-100" : "opacity-95"}
-            `}
           />
         </Link>
 
-        {/* Menu */}
-        <nav className="flex items-center gap-6">
-          {["home", "tools", "services", "videos"].map((item) => (
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-6">
+          {menuItems.map((item) => (
             <Link
               key={item}
               href={item === "home" ? "/" : `/${item}`}
-              className={`
-                text-sm lowercase tracking-wide
-                transition-all duration-500 ease-in-out
-                ${scrolled
-                  ? "text-gray-800 hover:text-black"
-                  : "text-white hover:text-gray-200"}
-              `}
+              className="text-sm lowercase tracking-wide text-gray-800 hover:text-black transition"
             >
               {item}
             </Link>
@@ -67,15 +38,47 @@ export default function Header() {
 
           {/* Language Switcher */}
           <select
-            className={`
-              bg-transparent text-sm lowercase cursor-pointer outline-none
-              transition-colors duration-500 ease-in-out
-              ${scrolled ? "text-gray-800" : "text-white"}
-            `}
+            className="bg-transparent text-sm lowercase outline-none text-gray-800 cursor-pointer"
             defaultValue="en"
           >
-            <option value="en" className="text-black">en</option>
-            <option value="np" className="text-black">np</option>
+            <option value="en">en</option>
+            <option value="np">np</option>
+          </select>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-2xl text-gray-800"
+          aria-label="Toggle menu"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${open ? "max-h-96" : "max-h-0"
+          }`}
+      >
+        <nav className="flex flex-col gap-4 px-6 py-4 bg-white border-t">
+          {menuItems.map((item) => (
+            <Link
+              key={item}
+              href={item === "home" ? "/" : `/${item}`}
+              onClick={() => setOpen(false)}
+              className="text-sm lowercase tracking-wide text-gray-800 hover:text-black"
+            >
+              {item}
+            </Link>
+          ))}
+
+          <select
+            className="bg-transparent text-sm lowercase outline-none text-gray-800"
+            defaultValue="en"
+          >
+            <option value="en">en</option>
+            <option value="np">np</option>
           </select>
         </nav>
       </div>

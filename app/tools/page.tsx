@@ -37,7 +37,7 @@ const tools = [
 
 export default function ToolsPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 py-16">
+    <main className="mx-auto max-w-5xl px-4 py-16">
       <header className="mb-16">
         <h1 className="text-4xl font-bold text-gray-900">Tools</h1>
         <p className="mt-3 max-w-2xl text-gray-600">

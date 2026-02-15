@@ -12,6 +12,7 @@
     "@types/mongoose": "^5.11.96",
     "lucide-react": "^0.522.0",
     "mongoose": "^8.16.1",
+    "nepali-date-library": "^1.1.11",
     "next": "15.3.6",
     "pdfkit": "^0.17.2",
     "react": "^19.0.0",
