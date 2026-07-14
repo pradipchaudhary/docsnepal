@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/logo-white.png" alt="DocsNepal Banner" width="500"/>
+  <h1>Docsnep</h1>
 </p>
 
 <p align="center">
