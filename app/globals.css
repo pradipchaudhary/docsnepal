@@ -2,7 +2,15 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
+
+  --primary: #0a4ca0;
+  --primary-foreground: #ffffff;
+
+  --muted: #64748b;
+  --border: #e2e8f0;
+
+  --radius: 1rem;
 }
 
 @theme inline {
