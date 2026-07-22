@@ -9,12 +9,7 @@ export default function Home() {
             🇳🇵 Nepal Public Information Platform
           </span>
 
-          <h1 className="mt-8 text-6xl font-bold tracking-tight">
-            Government Information
-            <span className="block text-blue-700">
-              Made Simple
-            </span>
-          </h1>
+
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
             Clear guides, useful tools, public notices,
