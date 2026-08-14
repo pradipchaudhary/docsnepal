@@ -1,21 +1,12 @@
+import Logo from "@/components/Logo";
+
 export default function Home() {
   return (
     <main>
 
       {/* ============ */}
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="mx-auto max-w-4xl text-center">
-          <span className="rounded-full border px-4 py-2 text-sm">
-            🇳🇵 Nepal Public Information Platform
-          </span>
-
-
-
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
-            Clear guides, useful tools, public notices,
-            and educational videos for every Nepali citizen.
-          </p>
-        </div>
+        <Logo />
       </section>
     </main>
   )
